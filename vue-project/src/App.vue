@@ -6,9 +6,8 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/about">Profile</router-link>
+      <router-link to="/">Exotic Pets</router-link>
+      <router-link to="/about">Cart</router-link>
     </div>
     <router-view />
   </div>
