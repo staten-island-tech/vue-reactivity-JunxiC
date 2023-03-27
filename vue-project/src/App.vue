@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -43,6 +42,7 @@ import HelloWorld from './components/HelloWorld.vue'
   border-radius: 40px;
   border: 5px solid black;
 }
+
 body {
   background-color: aquamarine;
 }
