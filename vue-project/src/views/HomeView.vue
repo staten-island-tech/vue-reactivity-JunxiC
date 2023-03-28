@@ -1,10 +1,9 @@
 <template>
   <div class="home">
-    <div class="card" v-for="list in exoticPets" :key="exoticPets">
-      {{ exoticPets }}>
-      <h2>{{ list.name }}</h2>
+    <div class="card" v-for="list in exoticPets" :key="list">
+      <h2>{{ list.animal }}</h2>
       <h3>Price: ${{ list.price }}</h3>
-      <img :src="list.image" :alt="list.name" />
+      <img class="img" :src="list.image" :alt="list.name" />
       <ul>
         <li v-for="animal in animals" :key="animal">{{ animal }}</li>
       </ul>
@@ -85,5 +84,10 @@ h1 {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
 }
 </style>
