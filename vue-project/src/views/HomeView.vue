@@ -1,9 +1,11 @@
 <template>
   <div class="home">
     <div class="card" v-for="list in exoticPets" :key="list">
-      <h2>{{ list.animal }}</h2>
-      <h3>Price: ${{ list.price }}</h3>
-      <img class="img" :src="list.image" :alt="list.name" />
+      <div>
+        <h2>{{ list.animal }}</h2>
+        <h3>Price: ${{ list.price }}</h3>
+        <img class="img" :src="list.image" :alt="list.name" />
+      </div>
       <ul>
         <li v-for="animal in animals" :key="animal">{{ animal }}</li>
       </ul>
@@ -89,5 +91,20 @@ h1 {
 
 .card {
   display: flex;
+  background-color: blanchedalmond;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-left: 40px;
+  border-radius: 20px;
+  border: 1px solid rgb(27, 6, 96);
+}
+
+.img {
+  width: 20vw;
+  height: 20vw;
+  object-fit: cover;
+  align-items: center;
 }
 </style>
