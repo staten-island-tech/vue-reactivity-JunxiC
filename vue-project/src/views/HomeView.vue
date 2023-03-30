@@ -9,6 +9,7 @@
       <ul>
         <li v-for="animal in animals" :key="animal">{{ animal }}</li>
       </ul>
+      <button class="btn">Add to Cart</button>
     </div>
   </div>
 </template>
@@ -106,5 +107,23 @@ h1 {
   height: 20vw;
   object-fit: cover;
   align-items: center;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  margin: 2rem 2rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10rem;
+  transition: all 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
 </style>

@@ -6,8 +6,14 @@
 
 <style>
 .about {
-  min-height: 100vh;
   display: flex;
-  align-items: center;
+  background-color: darkorchid;
+  margin-right: 225px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+h1 {
+  color: white;
 }
 </style>
