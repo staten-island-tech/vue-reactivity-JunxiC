@@ -107,6 +107,7 @@ h1 {
   height: 20vw;
   object-fit: cover;
   align-items: center;
+  border-radius: 10px;
 }
 
 .btn,
