@@ -1,21 +1,21 @@
 <template>
-  <div class="home">
-    <div class="card" v-for="list in exoticPets" :key="list">
-      <div>
-        <h2>{{ list.animal }}</h2>
-        <h3>Price: ${{ list.price }}</h3>
-        <img class="img" :src="list.image" :alt="list.name" />
-      </div>
-      <ul>
-        <li v-for="animal in animals" :key="animal">{{ animal }}</li>
-      </ul>
-      <button class="btn">Add to Cart</button>
-    </div>
+  <div>
+    <cardTemplate
+      v-for="animal in exoticPets"
+      :key="animal"
+      :animal="animal.animal"
+      :price="animal.price"
+      :image="animal.image"
+    />
   </div>
 </template>
-
 <script>
+import cardTemplate from '../components/icons/template.vue'
 export default {
+  name: 'HomeView',
+  components: {
+    cardTemplate
+  },
   data() {
     return {
       exoticPets: [
