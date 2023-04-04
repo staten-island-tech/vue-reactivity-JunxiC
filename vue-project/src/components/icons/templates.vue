@@ -10,34 +10,34 @@
       <button
         class="btn"
         @click="
-          addtocart({
+          removefromcart({
             animal: animal,
             price: price,
             image: image
           })
         "
       >
-        Add to Cart
+        Remove From Cart
       </button>
     </div>
   </div>
 </template>
 
 <script>
-import { reactive } from 'vue'
+import { cart } from './template.vue'
 export default {
-  name: 'cardTemplate',
+  name: 'cardTemplates',
   props: {
     animal: String,
     price: String,
     image: String
   },
   methods: {
-    addtocart(object) {
-      cart.push(object)
+    removefromcart(object) {
+      let animal = cart.find((animal) => animal.animal === object.animal)
+      cart.splice(animal, 1)
       console.log(cart)
     }
   }
 }
-export const cart = reactive([])
 </script>

@@ -1,8 +1,27 @@
 <template>
-  <div class="about">
-    <h1>Your Cart</h1>
+  <div>
+    <cardTemplates
+      v-for="animal in cart"
+      :key="animal"
+      :animal="animal.animal"
+      :price="animal.price"
+      :image="animal.image"
+    />
   </div>
 </template>
+
+<script>
+import { cart } from '../components/icons/template.vue'
+import cardTemplates from '../components/icons/templates.vue'
+export default {
+  components: { cardTemplates },
+  data() {
+    return {
+      cart
+    }
+  }
+}
+</script>
 
 <style>
 .about {
